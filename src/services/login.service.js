@@ -20,7 +20,10 @@ module.exports = {
 
         return {
             status: 200, 
-            result: token,
+            result: {
+                name: client.name,
+                token,
+            }
         }
     }
 }
