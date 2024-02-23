@@ -1,2 +1,2 @@
 module.exports.login = require('./login.route');
-module.exports.products = require('./products.route');
+module.exports.search = require('./search.route');
