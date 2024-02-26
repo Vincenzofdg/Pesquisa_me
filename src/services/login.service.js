@@ -21,6 +21,7 @@ module.exports = {
         return {
             status: 200, 
             result: {
+                id: client.id,
                 name: client.name,
                 token,
             }
