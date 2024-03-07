@@ -2,12 +2,12 @@ const { Router } = require("express");
 
 const { user: controller } = require('../controllers');
 
-const { getOverview } = controller;
+const { getById } = controller;
 const { token } = require('../middlewares');
 
 const user = Router();
 
 user
-     .get("/:id", [token, getOverview])
+     .get("/:id", [token, getById])
 
 module.exports = user;

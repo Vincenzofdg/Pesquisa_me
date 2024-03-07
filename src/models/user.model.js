@@ -1,18 +1,8 @@
 const connection = require('./connection');
 
 module.exports = {
-   getOverview: async (userId) => {
-      const query = `
-         SELECT
-            clients.name AS client_id,
-            search_id,
-            qtd_done,
-            qtd_goal
-         FROM user_searches
-         INNER JOIN
-            clients ON user_searches.client_id = clients.id
-         WHERE user_id = ?;
-      `;
+   getById: async (userId) => {
+      const query = "SELECT search_id as search, qtd_done as done, qtd_goal as goal FROM user_searches WHERE user_id = ?";
       const [result] = await connection.execute(query, [userId]);
       if (result.length === 0) return [];
       return result;

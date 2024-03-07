@@ -1,8 +1,8 @@
 const { user: model } = require('../models');
 
 module.exports = {
-    getOverview: async (userId) => {
-        const result = await model.getOverview(userId);
+    getById: async (userId) => {
+        const result = await model.getById(userId);
         return {status: 200, result};
     },
 };
