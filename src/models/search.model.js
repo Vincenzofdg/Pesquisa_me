@@ -9,7 +9,7 @@ module.exports = {
    getById: async (id) => {
       const query = "SELECT * FROM searches WHERE id = ?";
       const [result] = await connection.execute(query, [id]);
-      return result;
+      return result[0];
    },
    // getByUsersId: async (id) => {
    //    const query = "SELECT * FROM user_searches WHERE user_id = ?";
