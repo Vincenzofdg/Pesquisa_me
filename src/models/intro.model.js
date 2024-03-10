@@ -18,6 +18,7 @@ module.exports = {
             const number = i + 1 < 10 ? "0" + (i + 1) : i + 1;
             return `
                JSON_OBJECT(
+                  'question_id', q${number}.id,
                   'question', q${number}.question,
                   'answer', q${number}.answer,
                   'type', q${number}.answer_type
