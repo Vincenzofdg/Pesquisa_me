@@ -22,6 +22,8 @@ api.use(`/${SERVER_INDEX}/search`, routes.search);
 api.use(`/${SERVER_INDEX}/search/intro`, routes.intro);
 api.use(`/${SERVER_INDEX}/search/question`, routes.question);
 
+api.use(`/${SERVER_INDEX}/answer`, routes.searchAnswer);
+
 api.use(errorHandler);
 
 module.exports = api;

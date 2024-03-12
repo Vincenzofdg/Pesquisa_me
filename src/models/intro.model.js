@@ -65,5 +65,5 @@ module.exports = {
          console.error("Erro ao executar consulta:", error);
          return [];
       }
-   },
+   }
 };
