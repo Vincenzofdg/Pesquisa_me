@@ -3,16 +3,16 @@ const connection = require('./connection');
 module.exports = {
      create: async (clientId, blockName, answer, userId, searchId) => {
           try {
-               const placeholders = Array(answer.length).fill('(?, ?, ?, ?, ?)').join(', ');
+               const placeholders = Array(answer.length).fill('(?, ?, ?, ?, ?, ?)').join(', ');
              
                const query = `
                  INSERT INTO search_answers 
-                   (client_id, question_id, section, answer_collected, user_id)
+                   (client_id, search_id, question_id, section, answer_collected, user_id)
                  VALUES 
                    ${placeholders};
                `;
              
-               const values = answer.flatMap(cur => [clientId, cur.questionId, blockName, cur.text, userId]);
+               const values = answer.flatMap(cur => [clientId, searchId, cur.questionId, blockName, cur.text, userId]);
              
                const [result] = await connection.execute(query, values);
 
