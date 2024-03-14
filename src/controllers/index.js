@@ -1,4 +1,5 @@
 module.exports.login = require('./login.controller');
+module.exports.loginManager = require('./loginManager.controller');
 module.exports.user = require('./user.controller');
 module.exports.note = require('./note.controller');
 module.exports.client = require('./client.controller');

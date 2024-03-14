@@ -14,6 +14,7 @@ const SERVER_INDEX = "pesquisa";
 
 // Requests
 api.use(`/${SERVER_INDEX}/login`, routes.login);
+api.use(`/${SERVER_INDEX}/login-manager`, routes.loginManager);
 api.use(`/${SERVER_INDEX}/user`, routes.user);
 api.use(`/${SERVER_INDEX}/note`, routes.note);
 api.use(`/${SERVER_INDEX}/client`, routes.client);

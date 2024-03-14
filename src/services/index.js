@@ -1,4 +1,5 @@
 module.exports.login = require('./login.service');
+module.exports.loginManager = require('./loginManager.service');
 module.exports.user = require('./user.service');
 module.exports.note = require('./note.service');
 module.exports.client = require('./client.service');
