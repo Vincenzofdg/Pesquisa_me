@@ -11,6 +11,12 @@ module.exports = {
       const [result] = await connection.execute(query, [id]);
       return result[0];
    },
+   getByClientId: async (clientId) => {
+      const query = "SELECT * FROM searches WHERE client_id = ?";
+      const [result] = await connection.execute(query, [clientId]);
+      console.log(result)
+      return result;
+   },
    createSearch: async (client, intro, questions) => {
       const { clientId, meta, qtdUsers, total } = client;
       const ids = { intro: [], question: [], sections: [] };
