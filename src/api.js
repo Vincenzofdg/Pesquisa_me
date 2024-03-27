@@ -18,12 +18,12 @@ api.use(`/${SERVER_INDEX}/login-manager`, routes.loginManager);
 api.use(`/${SERVER_INDEX}/user`, routes.user);
 api.use(`/${SERVER_INDEX}/note`, routes.note);
 api.use(`/${SERVER_INDEX}/client`, routes.client);
-
 api.use(`/${SERVER_INDEX}/search`, routes.search);
 api.use(`/${SERVER_INDEX}/search/intro`, routes.intro);
 api.use(`/${SERVER_INDEX}/search/question`, routes.question);
 
 api.use(`/${SERVER_INDEX}/answer`, routes.searchAnswer);
+api.use(`/${SERVER_INDEX}/history`, routes.searchHistory);
 
 api.use(errorHandler);
 
